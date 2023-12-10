@@ -6,7 +6,7 @@ export default function page() {
       {/* Баллов */}
       <div
         href="/select-and-order"
-        className="border h-40 relative flex rounded-18 overflow-hidden"
+        className="border h-150 relative flex rounded-18 overflow-hidden"
       >
         <div className="w-1/2 flex pt-8 pl-7">
           <div className="space-y-0">

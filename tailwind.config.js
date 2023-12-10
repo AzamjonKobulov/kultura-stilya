@@ -13,6 +13,9 @@ module.exports = {
       screens: {
         xs: '400px',
       },
+      height: {
+        150: '150px',
+      },
       colors: {
         brand: {
           red: '#DB0000',
