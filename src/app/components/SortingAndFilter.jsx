@@ -48,13 +48,14 @@ export default function SortingAndFilter() {
   };
 
   const handleTouchMove = (e) => {
-    // const currentY = e.touches[0].clientY;
-    // const deltaY = currentY - startY;
-    // // Check if the user is swiping down (positive deltaY)
-    // if (deltaY > 50) {
-    //   // Adjust the threshold based on your design
-    //   handleClose();
-    // }
+    const currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+
+    // Check if the user is swiping down (positive deltaY)
+    if (deltaY > 50) {
+      // Adjust the threshold based on your design
+      handleClose();
+    }
   };
 
   const handleClose = () => {
@@ -75,11 +76,7 @@ export default function SortingAndFilter() {
           isFilterOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
-        <div
-          onClick={handleClose}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-        >
+        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
           <div className="w-14 h-0.5 mx-auto bg-brand-gray-100"></div>
           <h4 className="text-base font-bold text-center mt-2.5">
             Сортировка и фильтр
