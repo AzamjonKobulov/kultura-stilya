@@ -49,7 +49,7 @@ export default function page() {
               </div>
               <Link
                 href={item.href}
-                className="h-8 w-fit flex items-center gap-2.5 bg-white text-black rounded-full text-xxs px-5"
+                className="h-8 w-fit flex items-center gap-2.5 bg-white text-black font-semibold rounded-full text-xxs px-5"
               >
                 <span>Написать</span>
                 <span>
