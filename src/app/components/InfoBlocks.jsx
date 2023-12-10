@@ -14,7 +14,7 @@ const data = [
   },
   {
     image: '/assets/images/info.png',
-    label: 'Информацияо магазине',
+    label: 'Информация о магазине',
     href: '/about',
   },
 ];
