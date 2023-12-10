@@ -64,7 +64,7 @@ export default function SortingAndFilter() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div>
       <div
         className={`flex items-end inset-0 bg-black/40 z-40 ${
           isFilterOpen ? 'fixed' : 'hidden'
@@ -72,7 +72,7 @@ export default function SortingAndFilter() {
         onClick={handleClose}
       ></div>
       <div
-        className={`absolute left-0 bottom-0 z-50 bg-white w-full transition-all duration-300 rounded-t-18 pt-3.5 pb-10 ${
+        className={`fixed left-0 bottom-0 z-50 bg-white w-full transition-all duration-300 rounded-t-18 pt-3.5 pb-10 ${
           isFilterOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
