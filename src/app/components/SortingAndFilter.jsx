@@ -75,7 +75,11 @@ export default function SortingAndFilter() {
           isFilterOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
-        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+        <div
+          onClick={handleClose}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
           <div className="w-14 h-0.5 mx-auto bg-brand-gray-100"></div>
           <h4 className="text-base font-bold text-center mt-2.5">
             Сортировка и фильтр
