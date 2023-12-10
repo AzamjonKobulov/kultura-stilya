@@ -8,8 +8,8 @@ export default function page() {
         src="/assets/images/legs.png"
         alt="Legs"
         width={1000}
-        height={1000}
-        className="h-96 w-full"
+        height={1400}
+        className="h-80 w-full"
       />
       <div className="relative divide-y divide-brand-gray-100 z-10 bg-white rounded-t-18 pt-6 -mt-5 px-5">
         <div className="space-y-2 pb-9">
