@@ -43,6 +43,7 @@ export default function SortingAndFilter() {
 
   const handleClose = () => {
     setIsFilterOpen(false);
+    document.body.classList.remove('overflow-hidden');
   };
 
   return (
@@ -232,11 +233,11 @@ export default function SortingAndFilter() {
         </div>
 
         {/* BUTTONS */}
-        <div className="flex items-center gap-2.5 mt-12 px-5">
-          <button className="w-1/2 h-12 bg-brand-gray-200 text-white font-semibold text-base rounded-full px-5">
+        <div className="flex items-center gap-2.5 text-base text-white font-semibold mt-12 px-5">
+          <button className="min-w-[171px] w-full h-12 bg-brand-gray-200 rounded-full px-5">
             Сбросить фильтр
           </button>
-          <button className="w-1/2 h-12 bg-black text-white font-semibold text-base rounded-full px-5">
+          <button className="min-w-[154px] w-full h-12 bg-black rounded-full px-5">
             Применить
           </button>
         </div>
