@@ -36,10 +36,27 @@ const sorts = [
 export default function SortingAndFilter() {
   const { setIsFilterOpen, isFilterOpen } = useAppContext();
 
+  const [startY, setStartY] = useState(0);
+
   const [activeBrandBtn, setActiveBrandBtn] = useState(0);
   const [activeSexBtn, setActiveSexBtn] = useState(0);
   const [activeSizeBtn, setActiveSizeBtn] = useState(0);
   const [activeSortsBtn, setActiveSortsBtn] = useState(0);
+
+  const handleTouchStart = (e) => {
+    setStartY(e.touches[0].clientY);
+  };
+
+  const handleTouchMove = (e) => {
+    const currentY = e.touches[0].clientY;
+    const deltaY = currentY - startY;
+
+    // Check if the user is swiping down (positive deltaY)
+    if (deltaY > 50) {
+      // Adjust the threshold based on your design
+      handleClose();
+    }
+  };
 
   const handleClose = () => {
     setIsFilterOpen(false);
@@ -59,7 +76,7 @@ export default function SortingAndFilter() {
           isFilterOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
-        <div onClick={handleClose}>
+        <div onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
           <div className="w-14 h-0.5 mx-auto bg-brand-gray-100"></div>
           <h4 className="text-base font-bold text-center mt-2.5">
             Сортировка и фильтр
