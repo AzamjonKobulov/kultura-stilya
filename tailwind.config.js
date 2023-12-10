@@ -22,6 +22,7 @@ module.exports = {
           blue: '#3F89E1',
           porp: '#DADADA',
           yellow: '#DBD200',
+          overlay: '#0a0d1580',
           gray: {
             100: '#EFEFEF',
             200: '#838383',
@@ -30,6 +31,9 @@ module.exports = {
       },
       fontFamily: {
         gilroy: ['Gilroy', 'sans-serif'],
+      },
+      fontSize: {
+        xxs: '10px',
       },
       borderRadius: {
         18: '18px',

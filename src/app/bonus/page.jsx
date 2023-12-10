@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function page() {
   return (
-    <div className="space-y-5 px-5 pt-5">
+    <div className="space-y-5 px-5 pt-5 pb-32">
       {/* Баллов */}
       <div
         href="/select-and-order"

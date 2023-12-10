@@ -47,7 +47,7 @@ export default function MainProductSlider() {
                   </h3>
                   <Button
                     secondary
-                    className="h-8 bg-black whitespace-nowrap text-[10px] text-white px-5 py-2.5"
+                    className="h-8 bg-black whitespace-nowrap text-xxs text-white px-5 py-2.5"
                   >
                     Купить сейчас
                   </Button>

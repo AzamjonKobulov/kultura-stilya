@@ -15,7 +15,7 @@ export default function Home() {
   const { isSearching, productNotFound } = useAppContext();
 
   return (
-    <div className="pb-10">
+    <div className="pb-32">
       <div className="px-5">
         <SearchInput />
         <SortingAndFilter />
