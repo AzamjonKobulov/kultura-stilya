@@ -30,7 +30,7 @@ export default function page() {
       <p className="text-sm">
         Дальше ты будешь получать +50 баллов за каждый завершенный заказ.{' '}
       </p>
-      <div className="space-y-2">
+      <div>
         <h3>История</h3>
         <p className="text-sm">
           Пока что у тебя нет истории начислений баллов.
