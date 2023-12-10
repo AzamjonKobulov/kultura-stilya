@@ -48,14 +48,13 @@ export default function SortingAndFilter() {
   };
 
   const handleTouchMove = (e) => {
-    const currentY = e.touches[0].clientY;
-    const deltaY = currentY - startY;
-
-    // Check if the user is swiping down (positive deltaY)
-    if (deltaY > 50) {
-      // Adjust the threshold based on your design
-      handleClose();
-    }
+    // const currentY = e.touches[0].clientY;
+    // const deltaY = currentY - startY;
+    // // Check if the user is swiping down (positive deltaY)
+    // if (deltaY > 50) {
+    //   // Adjust the threshold based on your design
+    //   handleClose();
+    // }
   };
 
   const handleClose = () => {
