@@ -5,7 +5,7 @@ export default function SelectAndOrder() {
     <div className="grid grid-cols-2 gap-y-2.5 gap-x-5 mt-5 bg-no-repeat bg-cover bg-bottom rounded-18">
       {/* Выбрать и заказать */}
       <Link
-        href="/select-and-order"
+        href="/how-to-order"
         className="border h-40 col-span-2 relative flex items-center justify-center bg-block-1 bg-cover bg-no-repeat rounded-18 overflow-hidden"
       >
         <span className="w-8 h-8 absolute top-2.5 right-2 grid place-content-center rounded-full overflow-hidden bg-brand-red">
@@ -40,7 +40,7 @@ export default function SelectAndOrder() {
       </Link>
       {/* Баллов */}
       <Link
-        href="/select-and-order"
+        href="/bonus"
         className="border h-40 relative flex items-end justify-center bg-block-2 bg-cover bg-no-repeat rounded-18 overflow-hidden pb-8"
       >
         <span className="w-8 h-8 absolute top-2.5 right-2 grid place-content-center rounded-full overflow-hidden bg-brand-red">

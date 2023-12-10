@@ -1,4 +1,4 @@
-import Logo from './components/layouts/Logo';
+import Logo from './components/layouts/AppNav';
 import './globals.css';
 import { AppContextProvider } from './contexts/AppContext';
 
