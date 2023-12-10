@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/assets/font/Gilroy-Bold.eot');
+  src: url('/assets/font/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/assets/font/Gilroy-Bold.woff2') format('woff2'),
+    url('/assets/font/Gilroy-Bold.woff') format('woff'),
+    url('/assets/font/Gilroy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/assets/font/Gilroy-Medium.eot');
+  src: url('/assets/font/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/assets/font/Gilroy-Medium.woff2') format('woff2'),
+    url('/assets/font/Gilroy-Medium.woff') format('woff'),
+    url('/assets/font/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/assets/font/Gilroy-Regular.eot');
+  src: url('/assets/font/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/assets/font/Gilroy-Regular.woff2') format('woff2'),
+    url('/assets/font/Gilroy-Regular.woff') format('woff'),
+    url('/assets/font/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/assets/font/Gilroy-SemiBold.eot');
+  src: url('/assets/font/Gilroy-SemiBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('/assets/font/Gilroy-SemiBold.woff2') format('woff2'),
+    url('/assets/font/Gilroy-SemiBold.woff') format('woff'),
+    url('/assets/font/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/assets/font/Gilroy-Light.eot');
+  src: url('/assets/font/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+    url('/assets/font/Gilroy-Light.woff2') format('woff2'),
+    url('/assets/font/Gilroy-Light.woff') format('woff'),
+    url('/assets/font/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply font-gilroy text-xs;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+}
+
+.search-input-shadow {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.swiper {
+  @apply !overflow-visible;
+}
+
+.swiper-wrapper {
+  @apply !relative;
+}
+
+.swiper-pagination {
+  @apply !absolute !-bottom-8 xs:!-bottom-12;
+}
+
+.swiper-slide-next img {
+  @apply !translate-x-[120%] transition-all duration-1000;
+}
+
+.swiper-slide-prev img {
+  @apply !-left-7 transition-all duration-1000;
+}
+
+.swiper-pagination-bullet {
+  @apply !opacity-100 !bg-black;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-brand-red;
+}
+
+.scroll-none::-webkit-scrollbar {
+  display: none;
+}
