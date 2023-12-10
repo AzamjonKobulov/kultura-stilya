@@ -258,6 +258,7 @@ export const AppContextProvider = ({ children }) => {
   const [brandName, setBrandName] = useState('Все');
   const [searchedTerms, setSearchedTerms] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   console.log(searchTerm);
 
@@ -323,6 +324,11 @@ export const AppContextProvider = ({ children }) => {
     localStorage.removeItem('searched-terms');
   };
 
+  const handleOpenFilter = () => {
+    setIsFilterOpen(true);
+    document.body.classList.add('overflow-hidden');
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -332,15 +338,18 @@ export const AppContextProvider = ({ children }) => {
         updatedProducts,
         brandName,
         searchedTerms,
+        isFilterOpen,
 
         setSearchTerm,
         setIsSearching,
         setUpdatedProducts,
+        setIsFilterOpen,
 
         handleBrandName,
         handleSearchTerm,
         handleAddSearchedTerm,
         handleClearSearchHistory,
+        handleOpenFilter,
 
         productNotFound,
         isSearching,

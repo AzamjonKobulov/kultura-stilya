@@ -9,6 +9,7 @@ import SearchInput from './components/SearchInput';
 import SelectAndOrder from './components/SelectAndOrder';
 import SearchHistory from './components/SearchHistory';
 import ProductNotFound from './components/ProductNouFount';
+import SortingAndFilter from './components/SortingAndFilter';
 
 export default function Home() {
   const { isSearching, productNotFound } = useAppContext();
@@ -17,6 +18,7 @@ export default function Home() {
     <div className="pb-10">
       <div className="px-5">
         <SearchInput />
+        <SortingAndFilter />
         {isSearching && productNotFound && <ProductNotFound />}
         {isSearching && !productNotFound && <SearchHistory />}
         {!isSearching && (

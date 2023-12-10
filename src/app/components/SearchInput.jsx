@@ -2,7 +2,8 @@ import Image from 'next/image';
 import { useAppContext } from '../contexts/AppContext';
 
 export default function SearchInput() {
-  const { handleSearchTerm, searchTerm, setIsSearching } = useAppContext();
+  const { handleSearchTerm, searchTerm, setIsSearching, handleOpenFilter } =
+    useAppContext();
 
   return (
     <div className="h-11 flex items-center gap-3 rounded-[10px] search-input-shadow mt-5 pl-5 pr-[18px]">
@@ -14,12 +15,14 @@ export default function SearchInput() {
         value={searchTerm}
         onChange={handleSearchTerm}
       />
-      <Image
-        src="/assets/images/icons/filter.svg"
-        alt="filter icon"
-        width={19}
-        height={17}
-      />
+      <button onClick={() => handleOpenFilter()}>
+        <Image
+          src="/assets/images/icons/filter.svg"
+          alt="filter icon"
+          width={19}
+          height={17}
+        />
+      </button>
     </div>
   );
 }
