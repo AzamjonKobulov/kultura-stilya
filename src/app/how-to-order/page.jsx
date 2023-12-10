@@ -24,7 +24,7 @@ const data = [
 
 export default function page() {
   return (
-    <div className="space-y-6 px-5 ">
+    <div className="space-y-6 px-5">
       <h3 className="mt-5">Как сделать заказ? </h3>
       <div className="space-y-5">
         {data.map((item) => (
@@ -45,7 +45,7 @@ export default function page() {
             <div className="relative z-20 space-y-[18px]">
               <div>
                 <h3>{item.title}</h3>
-                <p className="text-sm font-light">{item.text}</p>
+                <p className="text-sm font-light text-white">{item.text}</p>
               </div>
               <Link
                 href={item.href}
@@ -63,16 +63,16 @@ export default function page() {
                     <path
                       d="M13.9401 13.6364V5.15116H5.45482"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M13.9401 5.15112L4.24266 14.8486"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>

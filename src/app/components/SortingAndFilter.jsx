@@ -86,7 +86,7 @@ export default function SortingAndFilter() {
         <div className="space-y-4 mt-5">
           {/* BRANDS */}
           <div className="space-y-4">
-            <p className="text-base font-bold ml-5">Бренд</p>
+            <h4 className="text-base font-bold ml-5">Бренд</h4>
             <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
               {brands.map((brand, index) => (
                 <button
@@ -112,7 +112,7 @@ export default function SortingAndFilter() {
 
           {/* SEXES */}
           <div className="space-y-4">
-            <p className="text-base font-bold ml-5">Подходят для</p>
+            <h4 className="text-base font-bold ml-5">Подходят для</h4>
             <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
               {sexes.map((sex, index) => (
                 <button
@@ -138,7 +138,7 @@ export default function SortingAndFilter() {
 
           {/* SIZES */}
           <div className="space-y-4">
-            <p className="text-base font-bold ml-5">Размер</p>
+            <h4 className="text-base font-bold ml-5">Размер</h4>
             <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
               {sizes.map((size, index) => (
                 <button
@@ -179,7 +179,7 @@ export default function SortingAndFilter() {
 
           {/* SORT */}
           <div className="space-y-4">
-            <p className="text-base font-bold ml-5">Цена от и до</p>
+            <h4 className="text-base font-bold ml-5">Цена от и до</h4>
             <div className="grid grid-cols-2 auto gap-5 px-5">
               <input
                 type="text"
@@ -196,7 +196,7 @@ export default function SortingAndFilter() {
 
           {/* SORT */}
           <div className="space-y-4">
-            <p className="text-base font-bold ml-5">Подходят для</p>
+            <h4 className="text-base font-bold ml-5">Подходят для</h4>
             <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
               {sorts.map((sort, index) => (
                 <button

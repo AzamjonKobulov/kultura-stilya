@@ -32,10 +32,12 @@ export default function SelectAndOrder() {
           </svg>
         </span>
         <div className="text-white space-y-0">
-          <h2 className=" text-3xl font-semibold text-white leading-none">
+          <h2 className=" text-3xl font-semibold leading-none">
             Выбрать и заказать
           </h2>
-          <p className="font-light leading-none">Как сделать заказ?</p>
+          <p className="font-light text-white leading-none">
+            Как сделать заказ?
+          </p>
         </div>
       </Link>
       {/* Баллов */}
@@ -69,14 +71,14 @@ export default function SelectAndOrder() {
         <div className="text-white space-y-0">
           <h2 className=" text-3xl font-semibold text-white leading-none">0</h2>
           <div className="space-y-5 font-light leading-none">
-            <p>Баллов</p>
-            <p>Баллов 1 балл = 1 ₽</p>
+            <p className="text-white">Баллов</p>
+            <p className="text-white">Баллов 1 балл = 1 ₽</p>
           </div>
         </div>
       </Link>
       {/* Приглашай друзей */}
       <Link
-        href="/select-and-order"
+        href="/referral"
         className="border h-40 relative flex items-end justify-center bg-block-3 bg-cover bg-no-repeat rounded-18 overflow-hidden pb-8"
       >
         <span className="w-8 h-8 absolute top-2.5 right-2 grid place-content-center rounded-full overflow-hidden bg-brand-red">
@@ -106,7 +108,7 @@ export default function SelectAndOrder() {
           <h2 className=" text-3xl font-semibold text-white leading-none">
             500 <span>₽</span>
           </h2>
-          <p className="font-light leading-none">
+          <p className="font-light text-white leading-none">
             Приглашай друзей! Дарим по 500 рублей каждому!
           </p>
         </div>

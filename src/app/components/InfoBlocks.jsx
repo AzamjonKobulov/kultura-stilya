@@ -5,7 +5,7 @@ const data = [
   {
     image: '/assets/images/friends.png',
     label: 'Зови друзей! +500 руб.',
-    href: '/call-friends',
+    href: '/referral',
   },
   {
     image: '/assets/images/size.png',
@@ -47,7 +47,9 @@ export default function InfoBlocks() {
               className="w-full h-full"
             />
           </div>
-          <p className="text-xs font-medium leading-none">{item.label}</p>
+          <p className="text-xs font-medium text-black leading-none">
+            {item.label}
+          </p>
         </Link>
       ))}
     </div>
