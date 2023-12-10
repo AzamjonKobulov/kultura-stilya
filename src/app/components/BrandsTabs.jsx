@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Button from './common/Button';
-import { useSearchContext } from '../contexts/SearchContext';
+import { useAppContext } from '../contexts/AppContext';
 
 const data = [
   { brand: 'Все' },
@@ -14,7 +14,7 @@ const data = [
 ];
 
 export default function BrandsTabs() {
-  const { handleBrandName } = useSearchContext();
+  const { handleBrandName } = useAppContext();
 
   const [activeBtn, setActiveBtn] = useState(0);
 

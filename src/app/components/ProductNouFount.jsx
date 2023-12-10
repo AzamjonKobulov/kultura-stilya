@@ -1,11 +1,11 @@
-import { useSearchContext } from '../contexts/SearchContext';
+import { useAppContext } from '../contexts/AppContext';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import SearchingNumberOfResults from './SearchingNumberOfResults';
 
 export default function ProductNotFound() {
-  const { updatedProducts, searchTerm } = useSearchContext();
+  const { updatedProducts, searchTerm } = useAppContext();
 
   return (
     <div className="space-y-10 mt-4">

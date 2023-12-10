@@ -1,6 +1,6 @@
 import Logo from './components/layouts/Logo';
 import './globals.css';
-import { SearchContextProvider } from './contexts/SearchContext';
+import { AppContextProvider } from './contexts/AppContext';
 
 export const metadata = {
   title: 'Культура стиля',
@@ -11,12 +11,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <SearchContextProvider>
+        <AppContextProvider>
           <div className="max-w-base mx-auto overflow-hidden">
             <Logo />
             <main>{children}</main>
           </div>
-        </SearchContextProvider>
+        </AppContextProvider>
       </body>
     </html>
   );

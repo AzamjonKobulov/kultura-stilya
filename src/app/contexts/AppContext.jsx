@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react';
 
-const SearchContext = createContext();
+const AppContext = createContext();
 
 const products = [
   {
@@ -252,7 +252,7 @@ const products = [
   },
 ];
 
-export const SearchContextProvider = ({ children }) => {
+export const AppContextProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [updatedProducts, setUpdatedProducts] = useState(products);
   const [brandName, setBrandName] = useState('Все');
@@ -268,17 +268,21 @@ export const SearchContextProvider = ({ children }) => {
   const productNotFound = updatedProducts.length === 0;
 
   const handleSearchTerm = (e) => {
-    setSearchTerm(e.target.value);
+    const inputValue = e.target.value.trim(); // Trim leading and trailing spaces
+
+    setSearchTerm(inputValue);
     setBrandName('Все');
 
     const filteredProducts = products.filter((product) =>
-      product.name.toLowerCase().includes(e.target.value.toLowerCase())
+      product.name.toLowerCase().includes(inputValue.toLowerCase())
     );
 
     setUpdatedProducts(() => {
-      if (e.target.value === '') {
+      if (inputValue === '') {
+        setIsSearching(false); // Set isSearching to false when input is empty
         return products;
       } else {
+        setIsSearching(true); // Set isSearching to true when input is not empty
         return filteredProducts;
       }
     });
@@ -290,7 +294,13 @@ export const SearchContextProvider = ({ children }) => {
         term: searchTerm,
       };
 
-      setSearchedTerms([...searchedTerms, searched]);
+      setSearchedTerms((prevTerms) => {
+        if (prevTerms.some((item) => item.term === searched.term)) {
+          return prevTerms;
+        } else {
+          return [...searchedTerms, searched];
+        }
+      });
 
       localStorage.setItem(
         'searched-terms',
@@ -308,15 +318,13 @@ export const SearchContextProvider = ({ children }) => {
     }
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setSearchTerm('');
-    setUpdatedProducts(products);
+  const handleClearSearchHistory = () => {
+    setSearchedTerms([]);
+    localStorage.removeItem('searched-terms');
   };
 
   return (
-    <SearchContext.Provider
+    <AppContext.Provider
       value={{
         products,
         searchTerm,
@@ -331,16 +339,16 @@ export const SearchContextProvider = ({ children }) => {
 
         handleBrandName,
         handleSearchTerm,
-        handleSubmit,
         handleAddSearchedTerm,
+        handleClearSearchHistory,
 
         productNotFound,
         isSearching,
       }}
     >
       {children}
-    </SearchContext.Provider>
+    </AppContext.Provider>
   );
 };
 
-export const useSearchContext = () => useContext(SearchContext);
+export const useAppContext = () => useContext(AppContext);

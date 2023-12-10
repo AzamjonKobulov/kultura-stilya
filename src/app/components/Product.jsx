@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useSearchContext } from '../contexts/SearchContext';
+import { useAppContext } from '../contexts/AppContext';
 
 export default function Product({ product }) {
-  const { handleAddSearchedTerm } = useSearchContext();
+  const { handleAddSearchedTerm } = useAppContext();
 
   return (
     <Link onClick={handleAddSearchedTerm} href="" className="space-y-2.5">

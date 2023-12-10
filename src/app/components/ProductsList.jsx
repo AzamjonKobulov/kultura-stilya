@@ -1,11 +1,11 @@
-import { useSearchContext } from '../contexts/SearchContext';
+import { useAppContext } from '../contexts/AppContext';
 
 import BrandsTabs from './BrandsTabs';
 import Product from './Product';
 
 export default function ProductsList() {
   const { updatedProducts, isSearching, brandName, searchTerm } =
-    useSearchContext();
+    useAppContext();
 
   return (
     <div>

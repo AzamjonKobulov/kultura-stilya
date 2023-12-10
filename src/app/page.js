@@ -1,6 +1,6 @@
 'use client';
 
-import { useSearchContext } from './contexts/SearchContext';
+import { useAppContext } from './contexts/AppContext';
 
 import InfoBlocks from './components/InfoBlocks';
 import MainProductSlider from './components/MainProductSlider';
@@ -11,7 +11,7 @@ import SearchHistory from './components/SearchHistory';
 import ProductNotFound from './components/ProductNouFount';
 
 export default function Home() {
-  const { isSearching, productNotFound } = useSearchContext();
+  const { isSearching, productNotFound } = useAppContext();
 
   return (
     <div className="pb-10">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useSearchContext } from '../contexts/SearchContext';
+import { useAppContext } from '../contexts/AppContext';
 
 import SearchingNumberOfResults from './SearchingNumberOfResults';
 
@@ -12,7 +12,8 @@ export default function SearchHistory() {
     setSearchTerm,
     setUpdatedProducts,
     products,
-  } = useSearchContext();
+    handleClearSearchHistory,
+  } = useAppContext();
 
   const handleSearchedTermClick = (item) => {
     setUpdatedProducts(products);
@@ -26,16 +27,26 @@ export default function SearchHistory() {
         updatedProductsNumber={updatedProducts.length}
         searchedTerm={searchTerm}
       />
-      <div className="flex flex-wrap items-center gap-2.5">
-        {searchedTerms.map((item, index) => (
-          <button
-            key={index}
-            className="h-8 bg-brand-gray-100 rounded-full px-3"
-            onClick={() => handleSearchedTermClick(item)}
-          >
-            {item.term}
-          </button>
-        ))}
+      <div>
+        <div className="flex flex-wrap items-center gap-2.5">
+          {searchedTerms.map((item, index) => (
+            <button
+              key={index}
+              className="h-8 bg-brand-gray-100 rounded-full px-3"
+              onClick={() => handleSearchedTermClick(item)}
+            >
+              {item.term}
+            </button>
+          ))}
+          {searchedTerms.length !== 0 && (
+            <button
+              onClick={() => handleClearSearchHistory()}
+              className="h-8 bg-brand-red text-white rounded-xl px-3"
+            >
+              Clear history
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
