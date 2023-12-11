@@ -78,7 +78,7 @@ export default function ProductDetails({ product }) {
                   : index === product.colors.length - 1
                   ? 'mr-5'
                   : ''
-              } w-[26px] h-[26px] grid place-content-center rounded-full border border-brand-gray-100`}
+              } w-[27px] h-[27px] grid place-content-center rounded-full border border-brand-gray-100`}
             >
               {activeColorBtn === index && (
                 <svg
