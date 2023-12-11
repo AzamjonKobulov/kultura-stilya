@@ -46,7 +46,10 @@ export default function Page() {
         <div className="space-y-5 py-4">
           <div>
             <h5 className="text-base font-bold">Ссылка на приглашение</h5>
-            <p className="text-sm text-brand-red underline underline-offset-4">
+            <a
+              href={TgLink}
+              className="text-sm text-brand-red underline underline-offset-4"
+            >
               <textarea
                 ref={textAreaRef}
                 value={TgLink}
@@ -54,7 +57,7 @@ export default function Page() {
                 readOnly
               />
               {TgLink}
-            </p>
+            </a>
           </div>
           <Button
             onClick={() => {
