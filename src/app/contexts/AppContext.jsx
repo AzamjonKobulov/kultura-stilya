@@ -6,249 +6,149 @@ const AppContext = createContext();
 
 const products = [
   {
-    id: 1,
+    id: '1',
     image: '/assets/images/product-2.svg',
     name: 'Adidas',
     cost: '5 000',
     brand: 'Adidas',
+    description:
+      'Описание самих кроссовок, модели, материалов и т.д. Описание самих кроссовок, мо....',
+    images: [
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+    ],
+    sizes: [38, 39, 40, 41, 42],
+    colors: ['#000', '#FFF', '#3F89E1', '#C184D0', '#DBD200'],
   },
   {
-    id: 2,
+    id: '2',
     image: '/assets/images/product-3.svg',
-    name: 'Adidas',
+    name: 'Nike',
     cost: '5 000',
-    brand: 'Adidas',
+    brand: 'Nike',
+    description:
+      'Описание самих кроссовок, модели, материалов и т.д. Описание самих кроссовок, мо....',
+    images: [
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+    ],
+    sizes: [38, 39, 40, 41, 42],
+    colors: ['#000', '#FFF', '#3F89E1', '#C184D0', '#DBD200'],
   },
   {
-    id: 3,
+    id: '3',
     image: '/assets/images/product-2.svg',
     name: 'Puma',
     cost: '5 000',
     brand: 'Puma',
+    description:
+      'Описание самих кроссовок, модели, материалов и т.д. Описание самих кроссовок, мо....',
+    images: [
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+    ],
+    sizes: [38, 39, 40, 41, 42],
+    colors: ['#000', '#FFF', '#3F89E1', '#C184D0', '#DBD200'],
   },
   {
-    id: 4,
+    id: '4',
     image: '/assets/images/product-3.svg',
     name: 'New Balance',
     cost: '5 000',
     brand: 'New Balance',
+    description:
+      'Описание самих кроссовок, модели, материалов и т.д. Описание самих кроссовок, мо....',
+    images: [
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+    ],
+    sizes: [38, 39, 40, 41, 42],
+    colors: ['#000', '#FFF', '#3F89E1', '#C184D0', '#DBD200'],
   },
   {
-    id: 5,
-    image: '/assets/images/product-3.svg',
-    name: 'New Balance',
-    cost: '5 000',
-    brand: 'New Balance',
-  },
-  {
-    id: 6,
+    id: '5',
     image: '/assets/images/product-2.svg',
     name: 'Converse',
     cost: '5 000',
     brand: 'Converse',
-  },
-  {
-    id: 7,
-    image: '/assets/images/product-2.svg',
-    name: 'Converse',
-    cost: '5 000',
-    brand: 'Converse',
-  },
-  {
-    id: 8,
-    image: '/assets/images/product-3.svg',
-    name: 'Converse',
-    cost: '5 000',
-    brand: 'Converse',
-  },
-  {
-    id: 9,
-    image: '/assets/images/product-2.svg',
-    name: 'Converse',
-    cost: '5 000',
-    brand: 'Converse',
-  },
-  {
-    id: 10,
-    image: '/assets/images/product-2.svg',
-    name: 'Adidas',
-    cost: '5 000',
-    brand: 'Adidas',
-  },
-  {
-    id: 11,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 12,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 13,
-    image: '/assets/images/product-2.svg',
-    name: 'Puma',
-    cost: '5 000',
-    brand: 'Puma',
-  },
-  {
-    id: 14,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 15,
-    image: '/assets/images/product-2.svg',
-    name: 'New Balance',
-    cost: '5 000',
-    brand: 'New Balance',
-  },
-  {
-    id: 16,
-    image: '/assets/images/product-2.svg',
-    name: 'New Balance',
-    cost: '5 000',
-    brand: 'New Balance',
-  },
-  {
-    id: 17,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 18,
-    image: '/assets/images/product-3.svg',
-    name: 'Nike',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 19,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 20,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 21,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 22,
-    image: '/assets/images/product-3.svg',
-    name: 'Nike',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 23,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 24,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 25,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 26,
-    image: '/assets/images/product-3.svg',
-    name: 'Nike',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 27,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 28,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 29,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 30,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 31,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 32,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 33,
-    image: '/assets/images/product-3.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 34,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
-  },
-  {
-    id: 35,
-    image: '/assets/images/product-2.svg',
-    name: 'Air Max new',
-    cost: '5 000',
-    brand: 'Nike',
+    description:
+      'Описание самих кроссовок, модели, материалов и т.д. Описание самих кроссовок, мо....',
+    images: [
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+      {
+        description: 'lorem ipsum dolor',
+        image: '/assets/images/img-product-detail.png',
+      },
+    ],
+    sizes: [38, 39, 40, 41, 42],
+    colors: ['#000', '#FFF', '#3F89E1', '#C184D0', '#DBD200'],
   },
 ];
 
@@ -260,8 +160,6 @@ export const AppContextProvider = ({ children }) => {
   const [isSearching, setIsSearching] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  console.log(searchTerm);
-
   const handleBrandName = (brand) => {
     setBrandName(brand);
   };
@@ -269,7 +167,7 @@ export const AppContextProvider = ({ children }) => {
   const productNotFound = updatedProducts.length === 0;
 
   const handleSearchTerm = (e) => {
-    const inputValue = e.target.value.trim(); // Trim leading and trailing spaces
+    const inputValue = e.target.value.trim();
 
     setSearchTerm(inputValue);
     setBrandName('Все');
@@ -280,10 +178,10 @@ export const AppContextProvider = ({ children }) => {
 
     setUpdatedProducts(() => {
       if (inputValue === '') {
-        setIsSearching(false); // Set isSearching to false when input is empty
+        setIsSearching(false);
         return products;
       } else {
-        setIsSearching(true); // Set isSearching to true when input is not empty
+        setIsSearching(true);
         return filteredProducts;
       }
     });

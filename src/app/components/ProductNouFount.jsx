@@ -22,15 +22,15 @@ export default function ProductNotFound() {
           height={100}
         />
         <div className="text-center space-y-1 px-3">
-          <p className="font-bold text-base">Не найдено</p>
-          <p className="text-sm font-medium">
+          <p className="font-bold text-black text-base">Не найдено</p>
+          <p className="text-sm text-black font-medium">
             Не нашли у нас? Свяжитесь с менеджером, он оперативно поможет вам
             найти необходимую модель.
           </p>
         </div>
         <div className="flex items-center justify-center">
           <Link
-            href="/"
+            href="/how-to-order"
             className="text-base font-semibold text-white bg-black rounded-full py-[15px] px-[30px]"
           >
             Написать менеджеру

@@ -11,8 +11,6 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
 
-import { motion } from 'framer-motion';
-
 import Image from 'next/image';
 import Button from './common/Button';
 
@@ -35,7 +33,7 @@ export default function MainProductSlider() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        className="mySwiper"
+        className="mySwiper main-slider"
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
@@ -54,15 +52,13 @@ export default function MainProductSlider() {
                 </div>
               </div>
               <div className="relative col-span-3">
-                <motion.div>
-                  <Image
-                    src={item.image}
-                    alt={item.label}
-                    className="w-96 xs:h-80 absolute translate-x-3 transition-all duration-1000 opacity-100 -top-10 xs:-top-2/3"
-                    width={189}
-                    height={250}
-                  />
-                </motion.div>
+                <Image
+                  src={item.image}
+                  alt={item.label}
+                  className="w-96 xs:h-80 absolute translate-x-3 transition-all duration-1000 opacity-100 -top-10 xs:-top-2/3"
+                  width={189}
+                  height={250}
+                />
               </div>
             </div>
           </SwiperSlide>

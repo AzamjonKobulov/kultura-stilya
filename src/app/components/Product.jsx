@@ -8,7 +8,11 @@ export default function Product({ product }) {
   const { handleAddSearchedTerm } = useAppContext();
 
   return (
-    <Link onClick={handleAddSearchedTerm} href="" className="space-y-2.5">
+    <Link
+      onClick={handleAddSearchedTerm}
+      href={`/products/${product.id}`}
+      className="space-y-2.5"
+    >
       <div className="h-40 bg-brand-gray-100 rounded-18">
         <Image
           src={product.image}
