@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import { useState } from 'react';
 import Button from './common/Button';
 
@@ -12,7 +14,17 @@ export default function ProductDetails({ product }) {
       <h3 className="ml-5">{product.name}</h3>
       {/* SIZES */}
       <div className="space-y-4 mt-5">
-        <h4 className="text-base font-bold ml-5">Размер</h4>
+        <div className="flex items-center justify-between px-5">
+          <h4 className="text-base font-bold">Размер</h4>
+          <div className="flex items-center gap-2.5 text-sm text-brand-gray-200">
+            <Link href="/" className="underline underline-offset-2">
+              Стельки
+            </Link>
+            <Link href="/" className="underline underline-offset-2">
+              Размерная сетка
+            </Link>
+          </div>
+        </div>
         <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
           {product.sizes.map((size, index) => (
             <button
@@ -48,7 +60,7 @@ export default function ProductDetails({ product }) {
           ))}
         </div>
       </div>
-      {/* SIZES */}
+      {/* COLORS */}
       <div className="space-y-4 mt-5">
         <h4 className="text-base font-bold ml-5">Цвет</h4>
         <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
