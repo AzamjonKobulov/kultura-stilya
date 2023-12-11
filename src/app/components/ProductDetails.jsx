@@ -99,7 +99,7 @@ export default function ProductDetails({ product }) {
       {/* DESCRIPTION */}
       <div className="px-5 mt-4">
         <h4 className="text-base font-bold">Описание</h4>
-        <p className="text-sm">{product.description}</p>
+        <p className="text-sm leading-none">{product.description}</p>
       </div>
       {/* COST */}
       <div className="flex items-center justify-between mt-8 px-5">

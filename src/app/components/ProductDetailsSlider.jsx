@@ -15,7 +15,7 @@ import Image from 'next/image';
 export default function ProductDetailsSlider({ product }) {
   return (
     <div>
-      <div className="h-72 bg-brand-gray-100 pb-8">
+      <div className="h-72 xs:h-80 bg-brand-gray-100 pb-8">
         <Swiper
           pagination={true}
           speed={300}
