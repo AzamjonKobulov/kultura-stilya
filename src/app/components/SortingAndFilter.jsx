@@ -66,13 +66,13 @@ export default function SortingAndFilter() {
   return (
     <div>
       <div
-        className={`max-w-base mx-auto flex items-end inset-0 bg-brand-overlay z-40 ${
+        className={`flex items-end inset-0 bg-brand-overlay z-40 ${
           isFilterOpen ? 'fixed' : 'hidden'
         }`}
         onClick={handleClose}
       ></div>
       <div
-        className={`fixed max-w-base mx-auto left-1/2 -translate-x-1/2 bottom-0 z-50 bg-white transition-all duration-300 rounded-t-18 pt-3.5 pb-10 ${
+        className={`fixed left-0 bottom-0 z-50 bg-white w-full transition-all duration-300 rounded-t-18 pt-3.5 pb-10 ${
           isFilterOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
