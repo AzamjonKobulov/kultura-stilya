@@ -25,16 +25,16 @@ export default function AppNav() {
             <path
               d="M7 1L1 7L7 13"
               stroke="black"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M1 7H14.7143"
               stroke="black"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </button>
@@ -45,7 +45,7 @@ export default function AppNav() {
           width={181}
           height={43}
           alt="Logo"
-          className="mx-auto"
+          className="w-[181px] h-11 mx-auto"
         />
       </Link>
     </nav>

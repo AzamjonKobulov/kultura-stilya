@@ -6,10 +6,10 @@ export default function SearchingNumberOfResults({
     <div className="">
       {searchedTerm !== '' && (
         <div className="flex items-center justify-between font-bold">
-          <p>
+          <h4>
             Поиск “<span>{searchedTerm}</span>”
-          </p>
-          <p>{updatedProductsNumber} найдено</p>
+          </h4>
+          <h4>{updatedProductsNumber} найдено</h4>
         </div>
       )}
     </div>
