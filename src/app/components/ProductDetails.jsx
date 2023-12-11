@@ -8,7 +8,7 @@ export default function ProductDetails({ product }) {
   const [activeColorBtn, setActiveColorBtn] = useState(0);
 
   return (
-    <div className="bg-white rounded-18 -mt-5  pt-6">
+    <div className="bg-white rounded-18 -mt-5 pt-6 pb-10">
       <h3 className="ml-5">{product.name}</h3>
       {/* SIZES */}
       <div className="space-y-4 mt-5">
