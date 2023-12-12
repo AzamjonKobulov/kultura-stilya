@@ -64,7 +64,7 @@ export default function SortingAndFilter() {
   return (
     <div>
       <div
-        className={`flex items-end inset-0 bg-brand-overlay z-40 ${
+        className={`max-w-base mx-auto flex items-end inset-0 bg-brand-overlay z-40 ${
           isFilterOpen ? 'fixed' : 'hidden'
         }`}
         onClick={handleClose}
