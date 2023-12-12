@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { useAppContext } from '@/app/contexts/AppContext';
 
 export default function AppNav() {
-  const { isSearching, setIsSearching } = useAppContext();
+  const { isSearching, setIsSearching, products, setUpdatedProducts } =
+    useAppContext();
 
   const router = useRouter();
   const pathname = usePathname();
@@ -16,7 +17,10 @@ export default function AppNav() {
       {pathname === '/' && !isSearching ? null : pathname === '/' &&
         isSearching ? (
         <button
-          onClick={() => setIsSearching(false)}
+          onClick={() => {
+            setIsSearching(false);
+            setUpdatedProducts(products);
+          }}
           className="absolute bottom-5 left-5"
         >
           <svg

@@ -197,17 +197,12 @@ export const AppContextProvider = ({ children }) => {
         if (prevTerms.some((item) => item.term === searched.term)) {
           return prevTerms;
         } else {
-          return [...searchedTerms, searched];
+          const newTerms = [...prevTerms, searched];
+          localStorage.setItem('searched-terms', JSON.stringify(newTerms));
+          return newTerms;
         }
       });
-
-      localStorage.setItem(
-        'searched-terms',
-        JSON.stringify([...searchedTerms, searched])
-      );
     }
-
-    return;
   };
 
   useEffect(() => {
