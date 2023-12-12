@@ -19,9 +19,7 @@ module.exports = {
       colors: {
         brand: {
           red: '#DB0000',
-          blue: '#3F89E1',
           porp: '#DADADA',
-          yellow: '#DBD200',
           overlay: '#0a0d1580',
           gray: {
             100: '#EFEFEF',

@@ -1,13 +1,18 @@
-'use client';
-
 import Link from 'next/link';
-
 import { useState } from 'react';
 import Button from './common/Button';
 
 export default function ProductDetails({ product }) {
-  const [activeSizeBtn, setActiveSizeBtn] = useState(0);
-  const [activeColorBtn, setActiveColorBtn] = useState(0);
+  const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
+
+  const handleSizeChange = (size) => {
+    setSelectedSize(size === selectedSize ? null : size);
+  };
+
+  const handleColorChange = (color) => {
+    setSelectedColor(color === selectedColor ? null : color);
+  };
 
   return (
     <div className="bg-white rounded-18 -mt-5 pt-6 pb-10">
@@ -20,16 +25,15 @@ export default function ProductDetails({ product }) {
             <Link href="/" className="underline underline-offset-2">
               Стельки
             </Link>
-            <Link href="/" className="underline underline-offset-2">
+            <Link href="/sizes" className="underline underline-offset-2">
               Размерная сетка
             </Link>
           </div>
         </div>
         <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
           {product.sizes.map((size, index) => (
-            <button
+            <label
               key={index}
-              onClick={() => setActiveSizeBtn(index)}
               className={`${
                 index === 0
                   ? 'ml-5'
@@ -37,26 +41,32 @@ export default function ProductDetails({ product }) {
                   ? 'mr-5'
                   : ''
               } ${
-                activeSizeBtn === index
+                size === selectedSize
                   ? 'bg-brand-red rounded-full border-brand-red'
                   : ''
               }  flex flex-col text-center text-sm font-semibold text-brand-gray-200 whitespace-nowrap px-2.5 py-0.5`}
             >
+              <input
+                type="radio"
+                checked={size === selectedSize}
+                onChange={() => handleSizeChange(size)}
+                className="hidden"
+              />
               <span
                 className={`text-sm font-semibold mx-auto ${
-                  activeSizeBtn === index ? 'text-white' : 'text-black'
+                  size === selectedSize ? 'text-white' : 'text-black'
                 }`}
               >
                 {size}
               </span>
               <span
                 className={`text-xs font-normal ${
-                  activeSizeBtn === index ? 'text-white' : 'text-brand-gray-200'
+                  size === selectedSize ? 'text-white' : 'text-brand-gray-200'
                 }`}
               >
                 {size} см
               </span>
-            </button>
+            </label>
           ))}
         </div>
       </div>
@@ -65,22 +75,26 @@ export default function ProductDetails({ product }) {
         <h4 className="text-base font-bold ml-5">Цвет</h4>
         <div className="scroll-none flex flex-nowrap overflow-auto gap-2.5">
           {product.colors.map((color, index) => (
-            <button
+            <label
               key={index}
-              onClick={() => setActiveColorBtn(index)}
-              style={{
-                backgroundColor: `${color}`,
-                boxShadow: '1px 1px 10px 0px rgba(34, 39, 79, 0.10)',
-              }}
               className={`${
                 index === 0
                   ? 'ml-5'
                   : index === product.colors.length - 1
                   ? 'mr-5'
                   : ''
-              } w-[27px] h-[27px] grid place-content-center rounded-full border border-brand-gray-100`}
+              } ${
+                color === selectedColor
+                  ? 'border-brand-red'
+                  : 'border-brand-porp'
+              } w-[27px] h-[27px] grid place-content-center rounded-full cursor-pointer`}
+              style={{
+                backgroundColor: `${color}`,
+                boxShadow: '1px 1px 10px 0px rgba(34, 39, 79, 0.10)',
+              }}
+              onClick={() => handleColorChange(color)}
             >
-              {activeColorBtn === index && (
+              {selectedColor === color && (
                 <svg
                   width="21"
                   height="21"
@@ -92,19 +106,19 @@ export default function ProductDetails({ product }) {
                   <path d="M15.3258 6.48394L8.4893 13.2591C8.35979 13.3874 8.30283 13.5772 8.33096 13.7865C8.35908 13.9959 8.46999 14.2078 8.63928 14.3756C8.80857 14.5433 9.02237 14.6533 9.23365 14.6811C9.44494 14.709 9.63639 14.6526 9.7659 14.5242L16.6024 7.74908C16.7319 7.62073 16.7889 7.43099 16.7608 7.22161C16.7327 7.01222 16.6217 6.80034 16.4525 6.63257C16.2832 6.4648 16.0694 6.35489 15.8581 6.32702C15.6468 6.29914 15.4553 6.35559 15.3258 6.48394Z" />
                 </svg>
               )}
-            </button>
+            </label>
           ))}
         </div>
       </div>
       {/* DESCRIPTION */}
       <div className="px-5 mt-4">
         <h4 className="text-base font-bold">Описание</h4>
-        <p className="text-sm leading-none">{product.description}</p>
+        <p className="leading-none">{product.description}</p>
       </div>
       {/* COST */}
       <div className="flex items-center justify-between mt-8 px-5">
         <div>
-          <p className="text-sm font-bold">Цена:</p>
+          <p className="font-bold">Цена:</p>
           <h3>{product.cost} ₽</h3>
         </div>
         <Button className="h-[52px] flex items-center gap-4 bg-black text-white text-base font-semibold px-[30px]">

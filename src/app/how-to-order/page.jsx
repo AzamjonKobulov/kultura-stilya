@@ -45,7 +45,7 @@ export default function page() {
             <div className="relative z-20 space-y-[18px]">
               <div>
                 <h3>{item.title}</h3>
-                <p className="text-sm font-light text-white">{item.text}</p>
+                <p className="font-light text-white">{item.text}</p>
               </div>
               <Link
                 href={item.href}

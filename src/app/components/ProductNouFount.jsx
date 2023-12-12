@@ -23,7 +23,7 @@ export default function ProductNotFound() {
         />
         <div className="text-center space-y-1 px-3">
           <p className="font-bold text-black text-base">Не найдено</p>
-          <p className="text-sm text-black font-medium">
+          <p className="text-black font-medium">
             Не нашли у нас? Свяжитесь с менеджером, он оперативно поможет вам
             найти необходимую модель.
           </p>

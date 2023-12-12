@@ -73,7 +73,7 @@
   }
 
   p {
-    @apply text-brand-gray-200;
+    @apply text-brand-gray-200 text-sm;
   }
 }
 

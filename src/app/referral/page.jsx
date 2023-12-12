@@ -34,7 +34,7 @@ export default function Page() {
             Приглашай друзей! Дарим <br /> по
             <span className="text-brand-red ml-2">500 рублей</span> каждому!
           </h3>
-          <div className="space-y-5 text-sm">
+          <div className="space-y-5">
             <p>
               Получи за каждое приглашение по твоей реферальной ссылке 500
               баллов. Также 500 баллов получит твой друг.
@@ -117,7 +117,7 @@ export default function Page() {
 
         <div className="space-y-2 py-5">
           <h5 className="text-base font-bold">Условия</h5>
-          <div className="space-y-5 text-sm">
+          <div className="space-y-5">
             <p>
               Баллы начисляются после того как заказ пользователя, перешедшего
               по реферальной ссылке, был отправлен в Россию.
@@ -129,7 +129,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="space-y-1 text-sm pt-5 pb-14">
+        <div className="space-y-1 pt-5 pb-14">
           <div className="flex items-center justify-between">
             <p>Переходов по ссылке</p>
             <p>0</p>
