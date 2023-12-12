@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useAppContext } from '@/app/contexts/AppContext';
 
@@ -13,11 +13,38 @@ export default function AppNav() {
 
   return (
     <nav className="relative flex justify-center items-center bg-white py-3 px-5">
-      {isSearching && (
+      {pathname === '/' && !isSearching ? null : pathname === '/' &&
+        isSearching ? (
         <button
-          onClick={() => {
-            pathname === '/' ? setIsSearching(false) : router.back();
-          }}
+          onClick={() => setIsSearching(false)}
+          className="absolute bottom-5 left-5"
+        >
+          <svg
+            width="16"
+            height="14"
+            viewBox="0 0 16 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 1L1 7L7 13"
+              stroke="black"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M1 7H14.7143"
+              stroke="black"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      ) : (
+        <button
+          onClick={() => router.back()}
           className="absolute bottom-5 left-5"
         >
           <svg
