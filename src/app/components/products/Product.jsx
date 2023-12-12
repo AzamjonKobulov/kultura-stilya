@@ -5,11 +5,14 @@ import Image from 'next/image';
 import { useAppContext } from '../../contexts/AppContext';
 
 export default function Product({ product }) {
-  const { handleAddSearchedTerm } = useAppContext();
+  const { handleAddSearchedTerm, setSearchTerm } = useAppContext();
 
   return (
     <Link
-      onClick={handleAddSearchedTerm}
+      onClick={() => {
+        handleAddSearchedTerm();
+        setSearchTerm('');
+      }}
       href={`/products/${product.id}`}
       className="space-y-2.5"
     >

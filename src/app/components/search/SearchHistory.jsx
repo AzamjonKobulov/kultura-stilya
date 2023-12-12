@@ -16,8 +16,12 @@ export default function SearchHistory() {
   } = useAppContext();
 
   const handleSearchedTermClick = (item) => {
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(item.term.toLowerCase())
+    );
+
+    setUpdatedProducts(filteredProducts);
     setSearchTerm(item.term);
-    setUpdatedProducts(products);
   };
 
   return (
