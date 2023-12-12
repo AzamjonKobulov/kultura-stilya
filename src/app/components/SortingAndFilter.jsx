@@ -51,9 +51,7 @@ export default function SortingAndFilter() {
     const currentY = e.touches[0].clientY;
     const deltaY = currentY - startY;
 
-    // Check if the user is swiping down (positive deltaY)
     if (deltaY > 50) {
-      // Adjust the threshold based on your design
       handleClose();
     }
   };
@@ -66,13 +64,13 @@ export default function SortingAndFilter() {
   return (
     <div>
       <div
-        className={`flex items-end inset-0 bg-brand-overlay z-40 ${
-          isFilterOpen ? 'fixed' : 'hidden'
+        className={`max-w-base left-1/2 -translate-x-1/2 flex items-end inset-0 bg-brand-overlay z-40 ${
+          isFilterOpen ? 'absolute' : 'hidden'
         }`}
         onClick={handleClose}
       ></div>
       <div
-        className={`fixed left-0 bottom-0 z-50 bg-white w-full transition-all duration-300 rounded-t-18 pt-3.5 pb-10 ${
+        className={`absolute max-w-base left-1/2 -translate-x-1/2 bottom-0 z-50 bg-white w-full transition-all duration-300 rounded-t-18 pt-3.5 pb-10 ${
           isFilterOpen ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
