@@ -1,6 +1,6 @@
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../../contexts/AppContext';
 
-import BrandsTabs from './BrandsTabs';
+import BrandsTabs from '../BrandsTabs';
 import Product from './Product';
 
 export default function ProductsList() {
@@ -21,9 +21,9 @@ export default function ProductsList() {
               ))
           : updatedProducts
               .filter((item) => item.brand === brandName)
-              .filter((item) =>
-                item.name.toLowerCase().includes(searchTerm.toLowerCase())
-              )
+              // .filter((item) =>
+              //   item.name.toLowerCase().includes(searchTerm.toLowerCase())
+              // )
               .map((product, index) => (
                 <Product key={index} product={product} />
               ))}

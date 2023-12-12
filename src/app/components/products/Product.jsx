@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../../contexts/AppContext';
 
 export default function Product({ product }) {
   const { handleAddSearchedTerm } = useAppContext();

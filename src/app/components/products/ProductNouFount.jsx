@@ -1,8 +1,8 @@
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../../contexts/AppContext';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import SearchingNumberOfResults from './SearchingNumberOfResults';
+import SearchingNumberOfResults from '../search/SearchingNumberOfResults';
 
 export default function ProductNotFound() {
   const { updatedProducts, searchTerm } = useAppContext();

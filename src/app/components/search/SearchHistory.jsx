@@ -1,6 +1,6 @@
 'use client';
 
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../../contexts/AppContext';
 
 import SearchingNumberOfResults from './SearchingNumberOfResults';
 
@@ -16,9 +16,8 @@ export default function SearchHistory() {
   } = useAppContext();
 
   const handleSearchedTermClick = (item) => {
-    setUpdatedProducts(products);
-
     setSearchTerm(item.term);
+    setUpdatedProducts(products);
   };
 
   return (

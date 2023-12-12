@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../../contexts/AppContext';
 
 const brands = [
   { brand: 'Все' },

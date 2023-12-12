@@ -2,8 +2,8 @@
 
 import { useAppContext } from '../../contexts/AppContext';
 
-import ProductDetailsSlider from '@/app/components/ProductDetailsSlider';
-import ProductDetails from '@/app/components/ProductDetails';
+import ProductDetailsSlider from '@/app/components/products/ProductDetailsSlider';
+import ProductDetails from '@/app/components/products/ProductDetails';
 
 export default function ProductPage({ params }) {
   const { products } = useAppContext();

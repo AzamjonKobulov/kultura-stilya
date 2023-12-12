@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 
 import Image from 'next/image';
-import Button from './common/Button';
+import Button from '../common/Button';
 
 const data = [
   { label: '20% cкидка', image: '/assets/images/product-1.svg' },

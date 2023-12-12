@@ -3,13 +3,13 @@
 import { useAppContext } from '../contexts/AppContext';
 
 import InfoBlocks from '../components/InfoBlocks';
-import MainProductSlider from '../components/MainProductSlider';
-import ProductsList from '../components/ProductsList';
-import SearchInput from '../components/SearchInput';
-import SelectAndOrder from '../components/SelectAndOrder';
-import SearchHistory from '../components/SearchHistory';
-import ProductNotFound from '../components/ProductNouFount';
-import SortingAndFilter from '../components/SortingAndFilter';
+import MainProductSlider from '../components/products/MainProductSlider';
+import ProductsList from '../components/products/ProductsList';
+import SearchInput from '../components/search/SearchInput';
+import SelectAndOrder from '../components/search/SelectAndOrder';
+import SearchHistory from '../components/search/SearchHistory';
+import ProductNotFound from '../components/products/ProductNouFount';
+import SortingAndFilter from '../components/search/SortingAndFilter';
 
 export default function ProductsPage() {
   const { isSearching, productNotFound } = useAppContext();

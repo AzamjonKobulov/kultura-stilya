@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useAppContext } from '../contexts/AppContext';
+import { useAppContext } from '../../contexts/AppContext';
 
 export default function SearchInput() {
   const { handleSearchTerm, searchTerm, setIsSearching, handleOpenFilter } =
