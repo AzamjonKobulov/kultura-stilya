@@ -15,7 +15,12 @@ export default function SearchInput() {
         value={searchTerm}
         onChange={handleSearchTerm}
       />
-      <button onClick={() => handleOpenFilter()}>
+      <button
+        onClick={() => {
+          setIsSearching(true);
+          handleOpenFilter();
+        }}
+      >
         <Image
           src="/assets/images/icons/filter.svg"
           alt="filter icon"
