@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState } from 'react';
-import { brands, sexes, sizes, sorts } from '../data/filterOptions'; // Adjust the path accordingly
+import { brands, sexes, sizes, sorts } from '../data/data'; // Adjust the path accordingly
 
 const FilterContext = createContext();
 
